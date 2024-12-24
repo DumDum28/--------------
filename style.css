@@ -1,3 +1,8 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
 .nav {
     background-color: #1F2B6C;
     padding: 25px;
@@ -14,6 +19,7 @@
     background-color: #8BBAD4;
     padding: 10px;
     text-align: center;
+    color: rgb(42, 44, 46);
 }
 
 form .DateAndcar {
@@ -24,7 +30,7 @@ form .DateAndcar {
 }
 
 form h3 {
-    margin-left: 600px;
+    text-align: center;
 }
 
 form .car_report {
@@ -64,6 +70,10 @@ form select {
     justify-content: center;
     gap: 10px;
     padding: 20px;
+}
+ 
+.reporter select{
+    margin-right: 50px;
 }
 
 .reporter button{
