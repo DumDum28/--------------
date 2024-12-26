@@ -15,7 +15,8 @@
 <body>
     <div class="nav">
         <a class="active">รายงานสภาพรถ</a>
-        <a href="">จัดการตารางเวลารถพยาบาล</a>
+        <a href="repair_report.html">แจ้งซ่อม</a>
+        <a href="table_manage.html">จัดการตารางเวลารถพยาบาล</a>
     </div>
     <div class="header">
         <h1 class="title">รายงานสภาพรถ</h1>
@@ -47,7 +48,7 @@
                     <label for="clean">ความสะอาด</label>
                     <input type="radio" name="clean" value="yes" id="clean-yes" onclick="toggleDropdown('clean')"
                         required> พร้อม
-                    <input type="radio" name="clean" value="no" id="clean-no" onclick="toggleDropdown('clean')"
+                    <input type="radio" name="clean" value="no" id="clean-no" onclick="toggleDropdown('clean')" onclick="addData('Item 1')"
                         required> ไม่พร้อม
                     <select id="clean-dropdown" disabled onchange="updateDropdown('clean')" required>
                         <option value="" disabled selected>สาเหตุ</option>

@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #1F2B6C;
+    padding: 25px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.header {
+    background-color: #8BBAD4;
+    padding: 10px;
+    text-align: center;
+    color: rgb(42, 44, 46);
+}
+
+.content {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.reserved {
+    background-color: #f4a3a3;
+}
+
+.available {
+    background-color: #d4eaff;
+}
+
+.date-label {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แก้ไขข้อมูล</title>
+    <link rel="stylesheet" href="./style_table_manage_detail.css">
+    <script src="./script_table.js" defer></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="car_report.html">รายงานสภาพรถ</a>
+        <a href="repair_report.html">แจ้งซ่อม</a>
+        <a href="table_manage.html">จัดการตารางเวลารถพยาบาล</a>
+    </div>
+
+    <div class="header">
+        <h1>จัดการตารางเวลารถพยาบาล</h1>
+    </div>
+
+    <div class="content">
+        <div class="form-container">
+            <h2>แก้ไขข้อมูล</h2>
+            <div class="form-group">
+                <label>วันที่</label>
+                <span id="date">วันที่ 2 มกราคม 2024</span>
+            </div>
+            <div class="form-group">
+                <label>ทะเบียนรถ</label>
+                <span id="carreg">กข 1234</span>
+            </div>
+            <div class="form-group">
+                <label>เวลา</label>
+                <select id="start-time">
+                    <option value="00:00">00.00 น.</option>
+                    <option value="01:00">01.00 น.</option>
+                    <option value="02:00">02.00 น.</option>
+                    <option value="03:00">03.00 น.</option>
+                    <option value="04:00">04.00 น.</option>
+                    <option value="05:00">05.00 น.</option>
+                    <option value="06:00">06.00 น.</option>
+                    <option value="07:00">07.00 น.</option>
+                    <option value="08:00">08.00 น.</option>
+                    <option value="09:00">09.00 น.</option>
+                    <option value="10:00">10.00 น.</option>
+                    <option value="11:00">11.00 น.</option>
+                    <option value="12:00">12.00 น.</option>
+                    <option value="13:00">13.00 น.</option>
+                    <option value="14:00">14.00 น.</option>
+                    <option value="15:00">15.00 น.</option>
+                    <option value="16:00">16.00 น.</option>
+                    <option value="17:00">17.00 น.</option>
+                    <option value="18:00">18.00 น.</option>
+                    <option value="19:00">19.00 น.</option>
+                    <option value="20:00">20.00 น.</option>
+                    <option value="21:00">21.00 น.</option>
+                    <option value="22:00">22.00 น.</option>
+                    <option value="23:00">23.00 น.</option>
+                </select>
+                <span> - </span>
+                <select id="end-time">
+                    <option value="01:00">01.00 น.</option>
+                    <option value="02:00">02.00 น.</option>
+                    <option value="03:00">03.00 น.</option>
+                    <option value="04:00">04.00 น.</option>
+                    <option value="05:00">05.00 น.</option>
+                    <option value="06:00">06.00 น.</option>
+                    <option value="07:00">07.00 น.</option>
+                    <option value="08:00">08.00 น.</option>
+                    <option value="09:00">09.00 น.</option>
+                    <option value="10:00">10.00 น.</option>
+                    <option value="11:00">11.00 น.</option>
+                    <option value="12:00">12.00 น.</option>
+                    <option value="13:00">13.00 น.</option>
+                    <option value="14:00">14.00 น.</option>
+                    <option value="15:00">15.00 น.</option>
+                    <option value="16:00">16.00 น.</option>
+                    <option value="17:00">17.00 น.</option>
+                    <option value="18:00">18.00 น.</option>
+                    <option value="19:00">19.00 น.</option>
+                    <option value="20:00">20.00 น.</option>
+                    <option value="21:00">21.00 น.</option>
+                    <option value="22:00">22.00 น.</option>
+                    <option value="23:00">23.00 น.</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button class="save" id="save-button">บันทึก</button>
+                <button class="cancel">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const carreg = urlParams.get('carreg');
+            const time = urlParams.get('time');
+
+            if (carreg) document.getElementById('carreg').textContent = carreg;
+            if (time) document.getElementById('start-time').value = `${time.padStart(2, '0')}:00`;
+        });
+
+        document.getElementById('save-button').addEventListener('click', () => {
+            const startTime = document.getElementById('start-time').value;
+            const endTime = document.getElementById('end-time').value;
+            const carreg = document.getElementById('carreg').textContent;
+
+            window.location.href = `table_manage.html?carreg=${carreg}&start=${startTime}&end=${endTime}`;
+        });
+    </script>
+</body>
+</html>

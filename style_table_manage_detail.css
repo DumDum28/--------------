@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #1F2B6C;
+    padding: 25px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.header {
+    background-color: #8BBAD4;
+    padding: 10px;
+    text-align: center;
+    color: rgb(42, 44, 46);
+}
+
+.content {
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #d4eaff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.form-group span {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.button-group .save {
+    background-color: #63d1b4;
+    color: white;
+}
+
+.button-group .cancel {
+    background-color: #f4a3a3;
+    color: white;
+}

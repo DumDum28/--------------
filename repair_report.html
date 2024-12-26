@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="repair_report.css">
+    <title>แจ้งซ่อม</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="car_report.html">รายงานสภาพรถ</a>
+        <a href="repair_report.html">แจ้งซ่อม</a>
+        <a href="table_manage.html">จัดการตารางเวลารถพยาบาล</a>
+    </div>
+
+    <div class="header">
+        <h1 class="title">รายงานสภาพรถ</h1>
+    </div>
+
+    <form action="">
+        <div class="DateAndcar">
+            <input type="date" id="date" name="date" required>
+
+            <select name="carlv" id="carlv" required>
+                <option value="" disabled selected>ระดับรถพยาบาล</option>
+                <option value="carlv1">ระดับ 1</option>
+                <option value="carlv2">ระดับ 2</option>
+                <option value="carlv3">ระดับ 3</option>
+            </select>
+
+            <select name="carreg" id="carreg" required>
+                <option value="" disabled selected>ทะเบียนรถ</option>
+                <option value="car1234">กข1234</option>
+                <option value="car6547">คต6547</option>
+            </select>
+        </div>
+
+        <!-- รายละเอียดการแจ้งซ่อม -->
+        <div class="repairDetail">
+            <h3>รายละเอียดการแจ้งซ่อม</h3>
+            
+        </div>
+    </form>
+</body>
+</html>
