@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-emergency_report.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script-emergency_report.js" defer></script>
+
+    <title>รายงานเคสฉุกเฉิน</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul class="menu">
+            <li><a href="">รายงานสภาพรถ</a></li>
+            <li><a href="">รายงานเคสฉุกเฉิน</a></li>
+            <li><a href="">จัดการตารางเวลารถพยาบาล</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Title -->
+    <div class="title">
+        <h1>รายงานเคสฉุกเฉิน</h1>
+    </div>
+
+
+    <!-- Form -->
+    <form class="box">
+        <div class="top-row">
+
+            <!-- Text field for people who contact -->
+            <label for="contact">ผู้ติดต่อ</label>
+            <input type="text" name="contact" id="contact" required>
+
+
+            <!-- Text field for contact number -->
+            <label for="contact_number">เบอร์โทรติดต่อ</label>
+            <input type="text" name="contact_number" id="contact_number" required>
+        </div>
+
+        <div class="center-row">
+
+            <!-- Text field for patient name (Dropdown) -->
+            <label for="#">สาเหตุ/อาการป่วย</label>
+            <select name="cause" id="cause" required>
+                <option value="" disabled selected>ระบุ</option>
+                <option value="1">อุบัติเหตุ</option>
+                <option value="2">อาการป่วย</option>
+                <option value="3">อื่นๆ</option>
+            </select>
+        </div>
+
+        <div class="bottom-row">
+
+            <!-- Text field for start point and end point(Dropdown & Map) -->
+            <label for="start-point">สถานที่ต้นทาง</label>
+            <select name="start-point" id="start-point" onchange="openMap(this)" required>
+                <option value="" disabled selected>ระบุ</option>
+                <option value="google-map">Google Map</option>
+            </select>
+
+            <label for="end-point">สถานที่ปลายทาง</label>
+            <select name="end-point" id="end-point" onchange="openMap(this)" required>
+                <option value="" disabled selected>ระบุ</option>
+                <option value="google-map">Google Map</option>
+            </select>
+        </div>
+
+        <div id="map" style="height: 400px; width: 100%; display: none;"></div>
+
+        <div class="button">
+            <button class="submit-button">บันทึก</button>
+            <button class="cancel-button">ยกเลิก</button>
+        </div>
+    </form>
+
+</body>
+</html>
