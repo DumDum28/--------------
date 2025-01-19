@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-emergency_report.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="https://api.longdo.com/map3/?key=3e91f170d789a8dffb97235cb6d11cb3" async defer></script>
     <script src="script-emergency_report.js" defer></script>
 
     <title>รายงานเคสฉุกเฉิน</title>
@@ -19,21 +19,17 @@
         </ul>
     </nav>
 
-
     <!-- Title -->
     <div class="title">
         <h1>รายงานเคสฉุกเฉิน</h1>
     </div>
 
-
     <!-- Form -->
     <form class="box">
         <div class="top-row">
-
             <!-- Text field for people who contact -->
             <label for="contact">ผู้ติดต่อ</label>
             <input type="text" name="contact" id="contact" required>
-
 
             <!-- Text field for contact number -->
             <label for="contact_number">เบอร์โทรติดต่อ</label>
@@ -41,7 +37,6 @@
         </div>
 
         <div class="center-row">
-
             <!-- Text field for patient name (Dropdown) -->
             <label for="#">สาเหตุ/อาการป่วย</label>
             <select name="cause" id="cause" required>
@@ -53,28 +48,27 @@
         </div>
 
         <div class="bottom-row">
-
             <!-- Text field for start point and end point(Dropdown & Map) -->
             <label for="start-point">สถานที่ต้นทาง</label>
-            <select name="start-point" id="start-point" onchange="openMap(this)" required>
+            <select name="start-point" id="start-point" onchange="init();" required>
                 <option value="" disabled selected>ระบุ</option>
-                <option value="google-map">Google Map</option>
+                <option value="longdo-map">Map</option>
             </select>
 
             <label for="end-point">สถานที่ปลายทาง</label>
-            <select name="end-point" id="end-point" onchange="openMap(this)" required>
+            <select name="end-point" id="end-point" onchange="init();" required>
                 <option value="" disabled selected>ระบุ</option>
-                <option value="google-map">Google Map</option>
+                <option value="longdo-map">Map</option>
             </select>
         </div>
 
         <div id="map" style="height: 400px; width: 100%; display: none;"></div>
+        <button id="confirm-button" style="display: none;" type="button" onclick="confirmLocation()">ยืนยันตำแหน่ง</button>
 
         <div class="button">
-            <button class="submit-button">บันทึก</button>
-            <button class="cancel-button">ยกเลิก</button>
+            <button class="submit-button" type="submit">บันทึก</button>
+            <button class="cancel-button" type="reset">ยกเลิก</button>
         </div>
     </form>
-
 </body>
 </html>
